@@ -40,7 +40,7 @@ RUN set -ex; \
 		make \
 	'; \
 	apt-get update; \
-	apt-get install -y $buildDeps --no-install-recommends; \
+	apt-get install -y $buildDeps ca-certificates --no-install-recommends; \
 	rm -rf /var/lib/apt/lists/*; \
 	\
 	wget -O redis.tar.gz "$REDIS_DOWNLOAD_URL"; \
